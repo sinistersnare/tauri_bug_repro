@@ -1,0 +1,47 @@
+[build]
+beforeDevCommand = ""
+beforeBuildCommand = ""
+devPath = "./www"
+distDir = "./www"
+# TODO: should not use this, and instead use fine-grained allowList?
+withGlobalTauri = true
+
+[package]
+productName = "Plot"
+version = "1.7.1"
+
+[tauri.allowlist]
+all = false
+
+[tauri.bundle]
+active = true
+category = "DeveloperTool"
+copyright = "TODO"
+externalBin = [ ]
+icon = [ "www/blob-no.png" ]
+identifier = "dev.plot"
+longDescription = ""
+resources = [ "./www" ]
+shortDescription = ""
+targets = "all"
+
+# [tauri.bundle.deb]
+# depends = [ ]
+
+# [tauri.bundle.macOS]
+# exceptionDomain = ""
+# frameworks = [ ]
+
+# [tauri.bundle.windows]
+# digestAlgorithm = "sha256"
+# timestampUrl = ""
+
+# [tauri.security]
+
+[[tauri.windows]]
+fullscreen = false
+height = 800
+resizable = true
+title = "Plot"
+width = 1_200
+fileDropEnabled = false
