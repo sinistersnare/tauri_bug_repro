@@ -6,15 +6,14 @@ use polars::prelude::*;
 use tauri::Manager;
 use tracing::info;
 
-#[tokio::main]
-async fn main() {
+fn main() {
     println!("doin it.");
     let d = df!("x" => &[1,2,3], "y" => &[4,5,6]).expect("Bad DF making.");
-    plot(d).await;
+    plot(d);
     println!("fuck what?");
 }
 
-pub async fn plot(d: DataFrame) {
+pub fn plot(d: DataFrame) {
     tracing_subscriber::fmt::init();
     info!("Pushing dataframe: {:?}", d);
     let mut app = tauri::Builder::default()
@@ -29,6 +28,7 @@ pub async fn plot(d: DataFrame) {
         .build(tauri::generate_context!())
         .expect("Error building Tauri app.");
     loop {
+        // println!("doing it.");
         let iteration = app.run_iteration();
         if iteration.window_count == 0 {
             break;
