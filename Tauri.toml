@@ -39,9 +39,9 @@ targets = "all"
 # [tauri.security]
 
 [[tauri.windows]]
-fullscreen = false
-height = 800
-resizable = true
-title = "Plot"
-width = 1_200
-fileDropEnabled = false
+# fullscreen = false
+# height = 800
+# resizable = true
+# title = "Plot"
+# width = 1_200
+# fileDropEnabled = false
