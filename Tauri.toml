@@ -11,7 +11,7 @@ productName = "Plot"
 version = "1.7.1"
 
 [tauri.allowlist]
-all = false
+all = true
 
 [tauri.bundle]
 active = true
@@ -38,7 +38,7 @@ targets = "all"
 
 # [tauri.security]
 
-[[tauri.windows]]
+# [[tauri.windows]]
 # fullscreen = false
 # height = 800
 # resizable = true
